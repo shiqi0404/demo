@@ -51,4 +51,3 @@ if __name__ == '__main__':
             print_answer2(b1)
     else:
         print("Enjoy school life!")
-
