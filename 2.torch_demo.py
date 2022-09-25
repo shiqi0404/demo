@@ -57,3 +57,33 @@ Y = torch.tensor([[2.0, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])
 print("cat_dim=0:", torch.cat((X, Y), dim=0))
 print("cat_dim=1:", torch.cat((X, Y), dim=1))
 
+print("logic:", X == Y)
+
+# 2.3 广播机制
+a = torch.arange(3).reshape((3, 1))
+b = torch.arange(2).reshape((1, 2))
+print("a:", a)
+print("b:", b)
+print("a+b:", a + b)
+
+# 2.4 索引和切片
+print("X[-1]:", X[-1])
+print("X[1:3]:", X[1:3])
+print("X:", X)
+X[1, 2] = 9
+print("X_change1:", X)
+X[0:2, :] = 12
+print("X_change2:", X)
+
+# 2.5 节省内存
+before = id(Y)
+Y = Y + X
+print(id(Y) == before)
+
+Z = torch.zeros_like(Y)
+print('id(Z):', id(Z))
+Z[:] = X + Y
+print('id(Z):', id(Z))
+
+
+
