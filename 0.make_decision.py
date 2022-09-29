@@ -29,9 +29,9 @@ def print_answer2(a):
     if 0 < a <= 25:
         print("Final answer is: 烧烤!")
     elif 25 < a <= 75:
-        print("Final answer is: 猪肚鸡")
+        print("Final answer is: 重庆火锅！")
     else:
-        print("Final answer is: 海底捞!")
+        print("Final answer is: 中餐！")
 
 
 def enter_print(b):
